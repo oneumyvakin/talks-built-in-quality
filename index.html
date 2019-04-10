@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Built-in Quality Assurance: как это сделать</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img style="border: none" src="img/qr_built_in_quality.png" /> <!-- REPLACE -->
+				</section>
+				
+				<section>
+					<h2>Встраивание качества</h2>
+					<h4>built-in quality</h4>
+					
+					<br>
+					
+					<small style="text-align: center;">
+						Олег Неумывакин<br>
+						тестировщик @ Plesk<br>
+						oneumyvakin@gmail.com<br>
+					</small>
+				</section>
+												
+				<section>
+					<h2>О себе</h2>
+					<br>
+					<p style="text-align: left;">
+					- 10+ лет тестирования<br>
+					</p>
+				</section>								
+				
+				<section>
+					<h3 style="text-align: left;">Качество - это метрики</h3>			
+					
+					<p style="text-align: left;">
+						- TTM - time to market<br>
+						- IPU - incident per user/unit/instance<br>
+						- NPS - net promote score<br>
+						- TTR - ticket time resolution<br>
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Качество - это скорость</h3>			
+					
+					<p style="text-align: left;">
+					- если мы не можем "быстро", то всё плохо<br>
+					- если мы исправляем баги мгновенно, не важно сколько мы их сделаем<br>
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Цели встраивания качества</h3>
+					
+					<p style="text-align: left;">
+					- снижение затрат<br>
+					- увеличение скорости<br>
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Встраивание качества</h3>			
+					
+					<p style="text-align: left;">
+					- это создание изначальных условий, установка функциональных ограничений и требований к продукту, которые уменьшают применимость техник тестирования* и делают невозможным создание классов ошибок**
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Отличие от тестирования (1)</h3>			
+					
+					<p style="text-align: left;">
+					- тестирование - это привнесение качества снаружи в продукт<br>
+					- тестирование - это всегда постфактум<br>
+					- тестирование - это другие цели<br>
+					- тестирование - это не эффективный способ достижение качества<br>
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+
+				<section>
+					<h3 style="text-align: left;">Отличие от тестирования (2)</h3>			
+					
+					<p style="text-align: left;">
+					- "встраивание" - это про то как вообще не заниматься тестированием<br>
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">А как же автоматизация?</h3>			
+					
+					<p style="text-align: left;">
+						- автоматизация - это "более быстрая лошадь"<br>
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Инструмент</h3>
+					
+					<p style="text-align: left;">
+					- эксплуатации продукта<br>
+					- тестирование<br>
+					- code review<br>
+					- имплементация<br>
+					- требования<br>
+					- идеи<br>
+					<p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Примеры</h3>
+					
+					<p style="text-align: left;">
+					- обратная связь от эксплуатации продукта<br>
+					- code review - безусловный минимум<br>
+					- брейншторм по имплементации<br>
+					- брейншторм по требованиям<br>
+					- валидация идей<br>
+					<p>
+					
+					<aside class="notes"><br>
+					</aside>
+				</section>				
+				
+				<section>
+					<h3 style="text-align: left;">Что еще мы знаем</h3>
+					<p style="text-align: left;">
+						- <a href="https://www.youtube.com/watch?v=yAY7ptV6pm4" target="_blank">How to Build in Quality from Day 1 using Lean QA and Agile Testing - Atlassian</a><br>
+						- <a href="https://www.infosys.com/insights/disruptions/Pages/integrated-qa.aspx" target="_blank">Integrated QA is the Need of the Hour</a><br>
+					</p>					
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+								
+				<section>
+					<h3 style="text-align: left;">Выводы</h3>
+					<p style="text-align: left;">
+						- встраивать нужно<br>
+						- сейчас это не просто<br>
+						- нужно накапливать и шарить опыт<br>
+					</p>					
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Вопросы?</h3>	
+					<div class="gridwrapper">
+						<div class="gridone">
+							<p style="text-align: left;">
+								<a href="https://bit.ly/qa_siberia" target="_blank">t.me/qa_siberia</a><br>
+								<a href="https://t.me/oneumyvakin" target="_blank">Олег Неумывакин</a><br>
+								<a href="https://t.me/oneumyvakin" target="_blank">Plesk</a>
+							</p>
+						</div>
+						<div class="gridtwo">
+							<a href="https://bit.ly/qa_siberia" target="_blank"><img id="img_qr_qa_siberia" style="border: none" src="img/qr_qa_siberia.png" /></a>
+						</div>
+					</div>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/highlight/go.min.js', async: true  }
+				]
+			});
+		</script>		
+		
+	</body>
+</html>
