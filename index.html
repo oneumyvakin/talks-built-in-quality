@@ -6,7 +6,8 @@
 
 		<title>Built-in Quality Assurance: как это сделать</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/reveal.css">		
+		<link rel="stylesheet" href="css/grid.css">
 		<link rel="stylesheet" href="css/theme/serif.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -23,7 +24,19 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
+			<div class="slides">			
+			
+				<section>					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section  data-background-video="img/nsk.mp4" data-background-video-loop="loop">
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+			
 				<section>
 					<img style="border: none" src="img/qr_built_in_quality.png" /> <!-- REPLACE -->
 				</section>
@@ -35,43 +48,84 @@
 					<br>
 					
 					<small style="text-align: center;">
-						Олег Неумывакин<br>
-						тестировщик @ Plesk<br>
-						oneumyvakin@gmail.com<br>
+						<a href="https://t.me/oneumyvakin">Олег Неумывакин</a><br>
+						тестировщик<br>
+						<a href="mailto:oneumyvakin@plesk.com">oneumyvakin@plesk.com</a><br>
 					</small>
 				</section>
-												
+
 				<section>
-					<h2>О себе</h2>
+					<h2>Что я делаю</h2>
 					<br>
 					<p style="text-align: left;">
-					- 10+ лет тестирования<br>
+					- тестирую<br>
+					- пишу на Go<br>
+					- ???<br>
 					</p>
-				</section>								
+				</section>
 				
 				<section>
-					<h3 style="text-align: left;">Качество - это метрики</h3>			
-					
-					<p style="text-align: left;">
-						- TTM - time to market<br>
-						- IPU - incident per user/unit/instance<br>
-						- NPS - net promote score<br>
-						- TTR - ticket time resolution<br>
-					<p>
+					<h3 style="text-align: left;">О чем доклад</h3>		
 					
 					<aside class="notes"><br>						
 					</aside>
 				</section>
 				
 				<section>
-					<h3 style="text-align: left;">Качество - это скорость</h3>			
+					<h3 style="text-align: left;">Качество - это метрики</h3>			
 					
 					<p style="text-align: left;">
-					- если мы не можем "быстро", то всё плохо<br>
-					- если мы исправляем баги мгновенно, не важно сколько мы их сделаем<br>
-					<p>
+						Метрики фокусируют усилия:<br>
+						- TTM  - time to market<br>
+						- IPU  - incident per user/unit<br>
+						- NPS  - net promote score<br>
+						- TTR  - time to resolution<br>
+						- MAU  - monthly active user<br>
+						- MTTR - mean time to recovery<br>
+						- MTBF - mean time between failures<br> 
+					</p>
 					
 					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Гипотеза: через скорость можно выкачать любую метрику</h3>			
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Качество - это скорость</h3>
+					
+					<p style="text-align: left;">
+					- если мы не можем "быстро", то это "плохо"<br>
+					- если мы исправляем баги мгновенно, не важно сколько мы их сделаем<br>
+					- скорость объективна<br>
+					</p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+
+				<section>
+					<h3 style="text-align: left;">Тестирование - </h3>
+					
+					<p style="text-align: left;">
+					- это инструмент привнесения "качества" в "продукт" извне<br>
+					- это время на feedback loop больше нуля<br>
+					- всегда постфактум, т.е. справа, т.е. поздно<br>
+					</p>
+					
+					<aside class="notes"><br>
+					</aside>
+				</section>
+
+				<section>
+					<h3 style="text-align: left;">А может встроить "качество" в продукт?</h3>
+					
+					<aside class="notes"><br>
 					</aside>
 				</section>
 				
@@ -79,112 +133,126 @@
 					<h3 style="text-align: left;">Цели встраивания качества</h3>
 					
 					<p style="text-align: left;">
-					- снижение затрат<br>
+					- время на feedback loop ноль или меньше<br>
+					- снижение затрат на обслуживание<br>
+					- снижение затрат на разработку<br>
 					- увеличение скорости<br>
-					<p>
+					</p>
 					
 					<aside class="notes"><br>						
 					</aside>
 				</section>
 				
 				<section>
-					<h3 style="text-align: left;">Встраивание качества</h3>			
+					<h3 style="text-align: left;">Рецепт встраивания качества</h3>			
 					
 					<p style="text-align: left;">
-					- это создание изначальных условий, установка функциональных ограничений и требований к продукту, которые уменьшают применимость техник тестирования* и делают невозможным создание классов ошибок**
-					<p>
-					
-					<aside class="notes"><br>						
-					</aside>
-				</section>
-				
-				<section>
-					<h3 style="text-align: left;">Отличие от тестирования (1)</h3>			
-					
-					<p style="text-align: left;">
-					- тестирование - это привнесение качества снаружи в продукт<br>
-					- тестирование - это всегда постфактум<br>
-					- тестирование - это другие цели<br>
-					- тестирование - это не эффективный способ достижение качества<br>
-					<p>
+					<span class="fragment">- получение качественной обратной связи из эксплуатации продукта<br></span>
+					<span class="fragment">- сделать невозможным создание <b>классов ошибок</b><br></span>
+					<span class="fragment">- создание изначальных условий, установка дополнительных функциональных требований и ограничений<br></span>
+					<span class="fragment">- <b>уменьшать необходимость применения техник тестирования</b><br></span>
+					<span class="fragment">- думать как не тестировать<br></span>
+					<span class="fragment">- тестирование должно быть вынужденным<br></span>
+					<span class="fragment">- производство должно быть вынужденным<br></span>
+					</p>
 					
 					<aside class="notes"><br>						
 					</aside>
 				</section>
 
 				<section>
-					<h3 style="text-align: left;">Отличие от тестирования (2)</h3>			
+					<h3 style="text-align: left;">Промышленные примеры</h3>
 					
 					<p style="text-align: left;">
-					- "встраивание" - это про то как вообще не заниматься тестированием<br>
-					<p>
-					
-					<aside class="notes"><br>						
-					</aside>
-				</section>
-				
-				<section>
-					<h3 style="text-align: left;">А как же автоматизация?</h3>			
-					
-					<p style="text-align: left;">
-						- автоматизация - это "более быстрая лошадь"<br>
-					<p>
-					
-					<aside class="notes"><br>						
-					</aside>
-				</section>
-				
-				<section>
-					<h3 style="text-align: left;">Инструмент</h3>
-					
-					<p style="text-align: left;">
-					- эксплуатации продукта<br>
-					- тестирование<br>
-					- code review<br>
-					- имплементация<br>
-					- требования<br>
-					- идеи<br>
-					<p>
-					
-					<aside class="notes"><br>						
-					</aside>
-				</section>
-				
-				<section>
-					<h3 style="text-align: left;">Примеры</h3>
-					
-					<p style="text-align: left;">
-					- обратная связь от эксплуатации продукта<br>
-					- code review - безусловный минимум<br>
-					- брейншторм по имплементации<br>
-					- брейншторм по требованиям<br>
-					- валидация идей<br>
-					<p>
+					- XSS / SQL injections в web приложениях<br>
+					- <a href="https://research.mozilla.org/rust/" target="_blank">переход на Rust в Firefox</a><br>
+					- Rust и Go lang<br>
+					</p>
 					
 					<aside class="notes"><br>
 					</aside>
-				</section>				
+				</section>
 				
 				<section>
-					<h3 style="text-align: left;">Что еще мы знаем</h3>
+					<h3 style="text-align: left;">Административные примеры</h3>
+					
 					<p style="text-align: left;">
+					- <a href="https://google.github.io/styleguide/cppguide.html" target="_blank">Google C++ Style Guide</a><br>
+					</p>
+					
+					<aside class="notes"><br>
+					</aside>
+				</section>
+
+				<section>
+					<h3 style="text-align: left;">Собственные примеры</h3>
+					
+					<p style="text-align: left;">
+					- тайм-ауты для выполнения системных команд<br>
+					- образы VM от вендора вместо собственных<br>
+					- доставка PHP приложения Docker'ом<br>
+					- использование Go вместо PHP<br>
+					- генерация ISO файла для VM<br>				
+					</p>
+					
+					<aside class="notes"><br>
+					</aside>
+				</section>
+
+
+				<section>
+					<h3 style="text-align: left;">Общие примеры</h3>
+					
+					<p style="text-align: left;">
+					- "падать раньше"<br>
+					- "не падать на не критичных проверках"<br>
+					- "срезание углов"<br>
+					- "достаточное абстрагирование"<br>
+					- "намерение на удаление"<br>
+					- <a href="https://s3.eu-central-1.amazonaws.com/srcme/plsk/managing-multiple-sources-of-truth.mp4" target="_blank">"источники состояния"</a><br>
+					- "планирование застройки"<br>
+					</p>
+					
+					<aside class="notes"><br>
+					</aside>
+				</section>
+
+				<section>
+					<h3 style="text-align: left;">Проблемы</h3>			
+					
+					<p style="text-align: left;">
+					- инерция мышления<br>
+					- ошибаться - страшно<br>
+					- не тестировать - страшно<br>
+					- постоянное сопротивление<br>
+					- не работает c лютым легаси<br>
+					- не работает с аутсорсом и фрилансом<br>
+					</p>
+					
+					<aside class="notes"><br>						
+					</aside>
+				</section>
+				
+				<section>
+					<h3 style="text-align: left;">Что ещё мы знаем</h3>
+					<p style="text-align: left;">
+						- <a href="https://www.youtube.com/watch?v=w5MN1JWRM1I" target="_blank">Quality at Speed - Atlassian</a><br>
 						- <a href="https://www.youtube.com/watch?v=yAY7ptV6pm4" target="_blank">How to Build in Quality from Day 1 using Lean QA and Agile Testing - Atlassian</a><br>
-						- <a href="https://www.infosys.com/insights/disruptions/Pages/integrated-qa.aspx" target="_blank">Integrated QA is the Need of the Hour</a><br>
 					</p>					
 					
 					<aside class="notes"><br>						
 					</aside>
 				</section>
-								
+
 				<section>
 					<h3 style="text-align: left;">Выводы</h3>
 					<p style="text-align: left;">
-						- встраивать нужно<br>
-						- сейчас это не просто<br>
-						- нужно накапливать и шарить опыт<br>
-					</p>					
+						- встраивание качества возможно<br>
+						- встраивание качества выгодней тестирования<br>
+						- нужно шарить опыт<br>
+					</p>
 					
-					<aside class="notes"><br>						
+					<aside class="notes"><br>
 					</aside>
 				</section>
 				
